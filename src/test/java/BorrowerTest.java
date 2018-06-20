@@ -14,6 +14,7 @@ public class BorrowerTest {
         borrower = new Borrower("Bob");
         library = new Library("Codeclan", 5);
         book = new Book("Coding Bible", "reference");
+        library.addBook(book);
     }
 
     @Test
@@ -28,8 +29,14 @@ public class BorrowerTest {
 
     @Test
     public void rentBook(){
-        library.addBook(book);
         borrower.rentBook(library);
+        assertEquals(0, library.getNumberOfBooks());
+        assertEquals(1, borrower.numberOfBooks());
+    }
+
+    @Test
+    public void rentSpecificBook(){
+        borrower.borrowFrom(library, book);
         assertEquals(0, library.getNumberOfBooks());
         assertEquals(1, borrower.numberOfBooks());
     }

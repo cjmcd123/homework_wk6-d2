@@ -43,4 +43,10 @@ public class Library {
         }
         return total;
     }
+
+    public Book findBook(Book book){
+        int index = this.books.lastIndexOf(book);
+        Book foundBook = this.books.remove(index);
+        return foundBook;
+    }
 }

@@ -23,4 +23,10 @@ public class Borrower {
         this.rentedBook.add(rental);
     }
 
+    public void borrowFrom(Library library, Book book){
+        Book book1 = library.findBook(book);
+        if(book1 != null){
+            this.rentedBook.add(book1);
+        }
+    }
 }
