@@ -8,7 +8,7 @@ public class Book {
 
 //    public Book(String title, String genreInput){
 //        this.title = title;
-//        this.genre = genre;
+//        this.genre = genreInput;
 //
 //    }
 //
@@ -29,12 +29,12 @@ public class Book {
     }
 
     public String getTitle(){
-        String output = book.get("title");
+        String output = this.book.get("title");
         return output;
     }
 
     public String getGenre(){
-        String output = book.get("genre");
+        String output = this.book.get("genre");
         return output;
     }
 }

@@ -25,8 +25,9 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        if (getNumberOfBooks() < getCapacity())
-        this.books.add(book);
+        if (getNumberOfBooks() < getCapacity()) {
+            this.books.add(book);
+        }
     }
 
     public Book rentBook() {
